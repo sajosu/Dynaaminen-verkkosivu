@@ -1,0 +1,28 @@
+cmd komentoja Reactille: 
+npm start --> starts the development server (type this in terminal in VS code, have to be in the correct project folder)
+npm run build --> bundles the app into static files for produvtion
+npm test --> starts the test runner
+npm run eject --> removes this tool and copies build dependencies, configuration files and scripts into the app directory. If yo udo this, you cant co back!!!
+npx create-react-app tiedostonimi --> luo uusi projekti
+npm i --> jos haet esim. gitistä react -projektin, tällä komennolla haetaan nodet projektiin (nehän eivät siirry gitiin eivätkä sieltä tule myöskään vakiona)
+
+command prompt komentoja:
+cd -> change directory
+cd kansionimi -> menee siihen kansioon
+cd.. -> ylöspäin 1 kansio tiedostorakenteessa
+dir --> kansion tiedostot listana
+
+cmd komentoja gitiin liittyen:
+git init
+git status
+git remote add origin URL(eli giti -repon url)
+git i sass --> PROJEKTIKANSIOSSA! asentaa sass -noden, ei tarvi tehdä css -filua erikseen
+
+git add. --> kaikki muuttuneet tiedostot menee "staged" -tilaan
+git commit -m "viesti" --> committaa muutokset
+git push -u origin main --> muuttuneet tiedostot viedään gittiin
+NÄMÄ 3 komentoa perättäin, kun haluat viedä muutokset cmd:llä gittiin
+
+
+ctrl + c lopettaa terminaalissa mitä se onkaan tekemässä ->
+pysäyttää esim serverin, jos haluaa uuden projektin avata samassa portissa 
