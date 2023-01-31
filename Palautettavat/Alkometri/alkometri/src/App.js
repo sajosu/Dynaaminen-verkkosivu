@@ -24,6 +24,8 @@ function App() {
     hoursAmount.push(i)
   }
 
+//Submit form event
+
 function handleSubmit(e) {
     e.preventDefault();
     let promilles = 0;
