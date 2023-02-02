@@ -6,8 +6,8 @@ function App() {
 
   //useState variables
   const [weight, setWeight] = useState(0)
-  const [bottles, setBottles] = useState(0)
-  const [hours, setHours] = useState(0)
+  const [bottles, setBottles] = useState(1)
+  const [hours, setHours] = useState(1)
   const [gender, setGender] = useState('male')
   const [result, setResult] = useState(0)
 
@@ -16,7 +16,7 @@ function App() {
   const bottlesAmount = []
   const hoursAmount = []
 
-  for (let i=1; i<25; i++) {
+  for (let i=1; i<26; i++) {
     bottlesAmount.push(i)
   }
 
@@ -30,20 +30,23 @@ function handleSubmit(e) {
     e.preventDefault();
     let promilles = 0;
     let litres = bottles * 0.33
-    let grams = litres * 8 *4.5
+    let grams = litres * 8 * 4.5
     let burning = weight / 10
-    let gramsLeft = grams - (burning * hours)
+    grams = grams - (burning * hours)
 
     if (gender === 'male') {
-      promilles = gramsLeft / (weight * 0.7)
+      promilles = grams / (weight * 0.7)
     }
     else {
-      promilles = gramsLeft / (weight * 0.6)
+      promilles = grams / (weight * 0.6)
     }
 
     if (promilles < 0) {
       promilles = 0
     }
+
+    console.log(hours)
+    console.log(bottles)
 
     setResult(promilles)
   }
@@ -60,14 +63,14 @@ function handleSubmit(e) {
           </div>
           <div>
           <label>Bottles (0.33l): </label>
-          <select name="bottles" id="bottles" value={bottles} onChange={e => setBottles(e.target.value)}>
-          {bottlesAmount.map(bottle => <option>{bottle}</option>)}
+          <select name="bottles" onChange={e => setBottles(e.target.value)}>
+          {bottlesAmount.map(bottle => <option value={bottle}>{bottle}</option>)}
           </select>
         </div>
         <div>
         <label>Hours: </label>
-          <select name="hours" id="hours" value={hours} onChange={e => setHours(e.target.value)}>
-          {hoursAmount.map(hour => <option>{hour}</option>)}
+          <select name="hours" onChange={e => setHours(e.target.value)}>
+          {hoursAmount.map(hour => <option value={hour}>{hour}</option>)}
           </select>
         </div>
         <div>
