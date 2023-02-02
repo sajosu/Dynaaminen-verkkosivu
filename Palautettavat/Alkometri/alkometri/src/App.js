@@ -45,9 +45,6 @@ function handleSubmit(e) {
       promilles = 0
     }
 
-    console.log(hours)
-    console.log(bottles)
-
     setResult(promilles)
   }
 
