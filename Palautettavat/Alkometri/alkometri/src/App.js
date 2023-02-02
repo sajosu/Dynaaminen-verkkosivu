@@ -16,7 +16,7 @@ function App() {
   const bottlesAmount = []
   const hoursAmount = []
 
-  for (let i=1; i<26; i++) {
+  for (let i=1; i<25; i++) {
     bottlesAmount.push(i)
   }
 
